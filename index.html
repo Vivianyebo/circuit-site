@@ -248,7 +248,7 @@
           <div class="bg-slate-900/60 border border-slate-800 rounded-2xl overflow-hidden hover:-translate-y-2 hover:border-cyan-500/40 transition-all duration-300">
             <div class="h-48 bg-slate-800 flex items-center justify-center overflow-hidden">
               ${item.image
-                ? `<img src="${item.image}" alt="${item.title}" class="w-full h-full object-cover" onerror="this.style.display='none';this.parentElement.innerHTML='<span class=\\'text-slate-600 text-sm\\'>图片加载失败</span>'">`
+                ? `<img src="${item.image}" alt="${item.title}" class="w-full h-full object-contain p-2" onerror="this.style.display='none';this.parentElement.innerHTML='<span class=\\'text-slate-600 text-sm\\'>图片加载失败</span>'">`
                 : '<span class="text-slate-600 text-sm">暂无图片</span>'}
             </div>
             <div class="p-6">
