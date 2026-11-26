@@ -1,0 +1,20 @@
+[
+  {
+    "title": "六层高速数字板",
+    "image": "images/case-01.png",
+    "tags": ["高速数字", "阻抗控制", "DDR4"],
+    "description": "为工业相机设计的六层高速数字板，完成 DDR4 布线与时序优化。"
+  },
+  {
+    "title": "多路电源管理模块",
+    "image": "images/case-02.png",
+    "tags": ["电源管理", "DC-DC", "低噪声"],
+    "description": "四路低噪声 DC-DC 电源模块，用于医疗设备前端供电。"
+  },
+  {
+    "title": "射频前端小板",
+    "image": "images/case-03.png",
+    "tags": ["射频", "阻抗匹配", "四层板"],
+    "description": "2.4GHz 射频前端四层板设计，完成阻抗匹配与 EMC 预布局。"
+  }
+]

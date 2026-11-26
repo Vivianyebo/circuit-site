@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>XX电路设计 - 专业电路设计与 PCB Layout 服务</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+          },
+        }
+      }
+    }
+  </script>
+
+  <style>
+    html { scroll-behavior: smooth; }
+    body { background-color: #0a0f1c; }
+    .hero-bg {
+      background-color: #0a0f1c;
+      background-image:
+        linear-gradient(rgba(34, 211, 238, 0.06) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(34, 211, 238, 0.06) 1px, transparent 1px),
+        radial-gradient(ellipse 80% 60% at 50% 0%, rgba(14, 165, 233, 0.18), transparent);
+      background-size: 40px 40px, 40px 40px, 100% 100%;
+    }
+    .glow-text { text-shadow: 0 0 30px rgba(34, 211, 238, 0.35); }
+  </style>
+</head>
+<body class="font-sans text-slate-200 antialiased">
+
+  <header class="fixed top-0 left-0 right-0 z-50 bg-[#0a0f1c]/80 backdrop-blur-md border-b border-slate-800">
+    <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16">
+        <a href="#home" class="flex items-center gap-2 text-white font-bold text-lg tracking-wide">
+          <i class="fa-solid fa-microchip text-cyan-400 text-xl"></i>
+          <span>XX电路设计</span>
+        </a>
+        <ul class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-300">
+          <li><a href="#home" class="hover:text-cyan-400 transition-colors">首页</a></li>
+          <li><a href="#cases" class="hover:text-cyan-400 transition-colors">案例展示</a></li>
+          <li><a href="#services" class="hover:text-cyan-400 transition-colors">服务范围</a></li>
+          <li><a href="#contact" class="hover:text-cyan-400 transition-colors">联系我们</a></li>
+        </ul>
+        <button id="menu-btn" class="md:hidden text-slate-300 hover:text-cyan-400 focus:outline-none" aria-label="打开菜单">
+          <i class="fa-solid fa-bars text-xl"></i>
+        </button>
+      </div>
+      <ul id="mobile-menu" class="hidden md:hidden pb-4 space-y-1 text-sm font-medium text-slate-300">
+        <li><a href="#home" class="block px-3 py-2 rounded hover:bg-slate-800 hover:text-cyan-400">首页</a></li>
+        <li><a href="#cases" class="block px-3 py-2 rounded hover:bg-slate-800 hover:text-cyan-400">案例展示</a></li>
+        <li><a href="#services" class="block px-3 py-2 rounded hover:bg-slate-800 hover:text-cyan-400">服务范围</a></li>
+        <li><a href="#contact" class="block px-3 py-2 rounded hover:bg-slate-800 hover:text-cyan-400">联系我们</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="home" class="hero-bg min-h-screen flex items-center pt-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <div class="inline-flex items-center gap-2 px-4 py-1.5 mb-6 rounded-full border border-cyan-500/30 bg-cyan-500/10 text-cyan-300 text-xs font-medium tracking-wide">
+        <i class="fa-solid fa-bolt"></i>
+        <span>High-Speed · Power · RF Design</span>
+      </div>
+      <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white leading-tight glow-text">
+        专业电路设计与<br class="sm:hidden">
+        <span class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-sky-500">PCB Layout</span> 服务
+      </h1>
+      <p class="mt-6 text-lg sm:text-xl text-slate-400 max-w-2xl mx-auto">
+        从原理图到量产，一站式硬件设计支持
+      </p>
+      <div class="mt-10">
+        <a href="#cases"
+           class="inline-flex items-center gap-2 px-8 py-3.5 rounded-lg bg-gradient-to-r from-cyan-500 to-sky-600 text-white font-semibold text-base shadow-lg shadow-cyan-500/25 hover:shadow-cyan-500/40 hover:-translate-y-0.5 transition-all duration-300">
+          <span>查看案例</span>
+          <i class="fa-solid fa-arrow-right"></i>
+        </a>
+      </div>
+      <div class="mt-20 grid grid-cols-3 gap-4 max-w-2xl mx-auto text-center">
+        <div>
+          <div class="text-2xl sm:text-3xl font-bold text-white">10+</div>
+          <div class="text-xs sm:text-sm text-slate-500 mt-1">年设计经验</div>
+        </div>
+        <div class="border-x border-slate-800">
+          <div class="text-2xl sm:text-3xl font-bold text-white">200+</div>
+          <div class="text-xs sm:text-sm text-slate-500 mt-1">交付项目</div>
+        </div>
+        <div>
+          <div class="text-2xl sm:text-3xl font-bold text-white">100%</div>
+          <div class="text-xs sm:text-sm text-slate-500 mt-1">可制造性验证</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="cases" class="py-20 sm:py-28 bg-[#0a0f1c]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-14">
+        <h2 class="text-3xl sm:text-4xl font-bold text-white">案例展示</h2>
+        <p class="mt-4 text-slate-400 max-w-xl mx-auto">
+          精选电路设计与 PCB Layout 项目，覆盖高速数字、电源管理、射频与混合信号等领域。
+        </p>
+        <div class="mt-6 w-16 h-1 bg-gradient-to-r from-cyan-400 to-sky-600 mx-auto rounded-full"></div>
+      </div>
+      <div id="case-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="col-span-full flex flex-col items-center justify-center py-16 text-slate-500">
+          <i class="fa-solid fa-circle-notch fa-spin text-3xl text-cyan-400 mb-4"></i>
+          <p>正在加载案例...</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="services" class="py-20 sm:py-28 bg-[#080c17] border-y border-slate-800/60">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-14">
+        <h2 class="text-3xl sm:text-4xl font-bold text-white">服务范围</h2>
+        <p class="mt-4 text-slate-400 max-w-xl mx-auto">
+          覆盖硬件研发全流程，从概念到量产的关键环节。
+        </p>
+        <div class="mt-6 w-16 h-1 bg-gradient-to-r from-cyan-400 to-sky-600 mx-auto rounded-full"></div>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="group bg-slate-900/60 border border-slate-800 rounded-2xl p-8 hover:-translate-y-2 hover:border-cyan-500/40 hover:shadow-xl hover:shadow-cyan-500/5 transition-all duration-300">
+          <div class="w-14 h-14 rounded-xl bg-cyan-500/10 border border-cyan-500/20 flex items-center justify-center mb-6 group-hover:bg-cyan-500/20 transition-colors">
+            <i class="fa-solid fa-diagram-project text-2xl text-cyan-400"></i>
+          </div>
+          <h3 class="text-xl font-semibold text-white mb-3">原理图设计</h3>
+          <p class="text-slate-400 text-sm leading-relaxed">
+            器件选型、电路拓扑设计、原理图绘制与评审，确保电气性能与成本平衡。
+          </p>
+        </div>
+        <div class="group bg-slate-900/60 border border-slate-800 rounded-2xl p-8 hover:-translate-y-2 hover:border-cyan-500/40 hover:shadow-xl hover:shadow-cyan-500/5 transition-all duration-300">
+          <div class="w-14 h-14 rounded-xl bg-cyan-500/10 border border-cyan-500/20 flex items-center justify-center mb-6 group-hover:bg-cyan-500/20 transition-colors">
+            <i class="fa-solid fa-layer-group text-2xl text-cyan-400"></i>
+          </div>
+          <h3 class="text-xl font-semibold text-white mb-3">PCB Layout</h3>
+          <p class="text-slate-400 text-sm leading-relaxed">
+            多层板布局布线、阻抗控制、电源完整性优化，兼顾可制造性与 EMC 要求。
+          </p>
+        </div>
+        <div class="group bg-slate-900/60 border border-slate-800 rounded-2xl p-8 hover:-translate-y-2 hover:border-cyan-500/40 hover:shadow-xl hover:shadow-cyan-500/5 transition-all duration-300">
+          <div class="w-14 h-14 rounded-xl bg-cyan-500/10 border border-cyan-500/20 flex items-center justify-center mb-6 group-hover:bg-cyan-500/20 transition-colors">
+            <i class="fa-solid fa-chart-line text-2xl text-cyan-400"></i>
+          </div>
+          <h3 class="text-xl font-semibold text-white mb-3">SI/PI 仿真</h3>
+          <p class="text-slate-400 text-sm leading-relaxed">
+            信号完整性、电源完整性仿真分析，提前发现高速链路与供电网络风险。
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="py-20 sm:py-28 bg-[#0a0f1c]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-14">
+        <h2 class="text-3xl sm:text-4xl font-bold text-white">联系我们</h2>
+        <p class="mt-4 text-slate-400 max-w-xl mx-auto">
+          有电路设计或 PCB Layout 需求？欢迎随时沟通。
+        </p>
+        <div class="mt-6 w-16 h-1 bg-gradient-to-r from-cyan-400 to-sky-600 mx-auto rounded-full"></div>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
+        <div class="bg-slate-900/60 border border-slate-800 rounded-2xl p-8 text-center hover:-translate-y-1 hover:border-cyan-500/40 transition-all duration-300">
+          <div class="w-12 h-12 mx-auto rounded-full bg-cyan-500/10 border border-cyan-500/20 flex items-center justify-center mb-4">
+            <i class="fa-solid fa-envelope text-cyan-400"></i>
+          </div>
+          <h3 class="text-sm font-medium text-slate-500 uppercase tracking-wide mb-2">邮箱</h3>
+          <a href="mailto:contact@example.com" class="text-white font-medium hover:text-cyan-400 transition-colors break-all">
+            contact@example.com
+          </a>
+        </div>
+        <div class="bg-slate-900/60 border border-slate-800 rounded-2xl p-8 text-center hover:-translate-y-1 hover:border-cyan-500/40 transition-all duration-300">
+          <div class="w-12 h-12 mx-auto rounded-full bg-cyan-500/10 border border-cyan-500/20 flex items-center justify-center mb-4">
+            <i class="fa-solid fa-phone text-cyan-400"></i>
+          </div>
+          <h3 class="text-sm font-medium text-slate-500 uppercase tracking-wide mb-2">电话</h3>
+          <a href="tel:+8613800000000" class="text-white font-medium hover:text-cyan-400 transition-colors">
+            +86 138 0000 0000
+          </a>
+        </div>
+        <div class="bg-slate-900/60 border border-slate-800 rounded-2xl p-8 text-center hover:-translate-y-1 hover:border-cyan-500/40 transition-all duration-300">
+          <div class="w-12 h-12 mx-auto rounded-full bg-cyan-500/10 border border-cyan-500/20 flex items-center justify-center mb-4">
+            <i class="fa-solid fa-location-dot text-cyan-400"></i>
+          </div>
+          <h3 class="text-sm font-medium text-slate-500 uppercase tracking-wide mb-2">地址</h3>
+          <p class="text-white font-medium">
+            广东省深圳市南山区科技园 XX 大厦 8 楼
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="bg-[#080c17] border-t border-slate-800/60 py-8">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+      <div class="flex items-center gap-2 text-slate-400 text-sm">
+        <i class="fa-solid fa-microchip text-cyan-400"></i>
+        <span>© 2025 XX电路设计. All rights reserved.</span>
+      </div>
+      <div class="flex items-center gap-4 text-slate-500">
+        <a href="#" class="hover:text-cyan-400 transition-colors" aria-label="微信"><i class="fa-brands fa-weixin"></i></a>
+        <a href="#" class="hover:text-cyan-400 transition-colors" aria-label="邮箱"><i class="fa-solid fa-envelope"></i></a>
+        <a href="#" class="hover:text-cyan-400 transition-colors" aria-label="电话"><i class="fa-solid fa-phone"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const menuBtn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    menuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+    mobileMenu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
+      });
+    });
+  </script>
+
+  <script>
+    // 从同目录下的 cases.json 读取案例数据并渲染
+    fetch('cases.json')
+      .then(res => {
+        if (!res.ok) throw new Error('cases.json 加载失败');
+        return res.json();
+      })
+      .then(cases => {
+        const grid = document.getElementById('case-grid');
+        if (!cases || cases.length === 0) {
+          grid.innerHTML = '<p class="col-span-full text-center text-slate-500 py-16">暂无案例，请在 cases.json 中添加。</p>';
+          return;
+        }
+        grid.innerHTML = cases.map(item => `
+          <div class="bg-slate-900/60 border border-slate-800 rounded-2xl overflow-hidden hover:-translate-y-2 hover:border-cyan-500/40 transition-all duration-300">
+            <div class="h-48 bg-slate-800 flex items-center justify-center overflow-hidden">
+              ${item.image
+                ? `<img src="${item.image}" alt="${item.title}" class="w-full h-full object-cover" onerror="this.style.display='none';this.parentElement.innerHTML='<span class=\\'text-slate-600 text-sm\\'>图片加载失败</span>'">`
+                : '<span class="text-slate-600 text-sm">暂无图片</span>'}
+            </div>
+            <div class="p-6">
+              <h3 class="text-lg font-semibold text-white">${item.title || '未命名项目'}</h3>
+              <p class="text-sm text-slate-400 mt-2 leading-relaxed">${item.description || ''}</p>
+              <div class="flex flex-wrap gap-2 mt-4">
+                ${(item.tags || []).map(t => `<span class="text-xs bg-cyan-500/10 text-cyan-300 border border-cyan-500/20 px-2 py-1 rounded">${t}</span>`).join('')}
+              </div>
+            </div>
+          </div>
+        `).join('');
+      })
+      .catch(err => {
+        console.error(err);
+        document.getElementById('case-grid').innerHTML =
+          '<p class="col-span-full text-center text-red-400 py-16">案例加载失败，请确认 cases.json 存在且格式正确。</p>';
+      });
+  </script>
+
+</body>
+</html>
